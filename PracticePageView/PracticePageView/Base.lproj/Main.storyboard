@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebt-qx-JkI">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ccc View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="baseVC" id="BYZ-38-t0r" customClass="CccViewController" customModule="PracticePageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEV-9C-Cqy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TEV-9C-Cqy" secondAttribute="bottom" id="5x3-Wi-kZg"/>
+                            <constraint firstItem="TEV-9C-Cqy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PDu-bc-gb9"/>
+                            <constraint firstItem="TEV-9C-Cqy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RtH-DO-aGM"/>
+                            <constraint firstItem="TEV-9C-Cqy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ef3-O4-rUJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="TEV-9C-Cqy" id="lsv-ix-Y5w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2032" y="127"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lYs-sg-fx0">
+            <objects>
+                <viewController storyboardIdentifier="baseVC2" id="ebt-qx-JkI" customClass="ViewController" customModule="PracticePageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ut-pl-xAW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-Nm-oyp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="hJy-3r-bRX" kind="embed" id="QaW-1T-oyu"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="98k-zu-wlZ" firstAttribute="trailing" secondItem="MaW-Nm-oyp" secondAttribute="trailing" id="ivY-av-msO"/>
+                            <constraint firstItem="MaW-Nm-oyp" firstAttribute="leading" secondItem="98k-zu-wlZ" secondAttribute="leading" id="mQx-qA-t94"/>
+                            <constraint firstItem="MaW-Nm-oyp" firstAttribute="top" secondItem="98k-zu-wlZ" secondAttribute="top" id="q3A-qg-m3z"/>
+                            <constraint firstItem="98k-zu-wlZ" firstAttribute="bottom" secondItem="MaW-Nm-oyp" secondAttribute="bottom" id="rSr-dW-oSy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="98k-zu-wlZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04x-2e-JEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="139"/>
+        </scene>
+        <!--PageVC-->
+        <scene sceneID="tA1-7Y-e7W">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hJy-3r-bRX" customClass="PageVC" customModule="PracticePageView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJ3-4n-Hjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1283" y="139"/>
+        </scene>
+    </scenes>
+</document>
