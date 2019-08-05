@@ -36,11 +36,28 @@ class PageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageViewCont
         return aaa
     }
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let vc = previousViewControllers.first as? CccViewController,
+            let color = vc.color else { return }
+        let value = self.colors.firstIndex(of: color)
+        
+        print("Called +++++++ \(value)")
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        guard let vc = pendingViewControllers.first as? CccViewController,
+            let color = vc.color else { return }
+        let value = self.colors.firstIndex(of: color)
+        print("Called -------\(value)")
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.dataSource = self
+        self.delegate = self
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "baseVC") else { return }
         guard let cvc = vc as? CccViewController else {
